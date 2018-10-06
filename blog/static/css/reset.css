@@ -1,0 +1,16 @@
+html,
+body,
+h1,
+p,
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    width: 100%;
+}

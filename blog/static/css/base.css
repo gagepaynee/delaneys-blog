@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+#name {
+    font-size: 48px;
+    margin: 30px 0;
+}
+
+#navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem {
+    list-style-type: none;
+    font-size: 18px;
+    padding: 15px;
+}

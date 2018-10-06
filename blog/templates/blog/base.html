@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>Delaney Bresnahan</title>
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav>
+            <h1 id="name">Delaney Bresnahan</h1>
+            <ul id="navBar">
+                <li class="navItem">
+                    Home
+                </li>
+                <li class="navItem">
+                    Travel
+                </li>
+                <li class="navItem">
+                    LYH
+                </li>
+                <li class="navItem">
+                    About
+                </li>
+                <li class="navItem">
+                    Contact
+                </li>
+            </ul>
+        </nav>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+
+</html>
