@@ -120,6 +120,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+<<<<<<< HEAD
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -130,3 +136,4 @@ EMAIL_HOST_USER = 'gage_payne37@yahoo.com'
 EMAIL_HOST_PASSWORD = 'Storm377'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 465 
+>>>>>>> ac804cd77fa3ca55f7ad7db25b1067d26fca6169
