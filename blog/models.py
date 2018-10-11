@@ -3,10 +3,11 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+import datetime
 
 BLOG_CATEGORIES = (
     ('Travel', 'TRAVEL'),
-    ('Lyh', 'LYH')
+    ('LYH', 'LYH')
 )
 
 # Create your models here.
@@ -16,13 +17,22 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     category = models.CharField(max_length=6, choices=BLOG_CATEGORIES, default='Lyh')
-    created_date = models.DateTimeField(default = timezone.now)
+    created_date = models.DateTimeField(default = datetime.date.today)
     published_date = models.DateTimeField(blank=True, null=True)
+    bg_image = models.ImageField(upload_to = 'images/')
     
     def publish(self):
         self.published_date = timezone.now()
         self.save()
         
-    def __str__(self):
+    def gettitle(self):
         return self.title
     
+class PostImage(models.Model):
+    blog_title = models.CharField(max_length=200, help_text='This field is for image storage. Try to keep this the same for all images for one blog and different for different blogs.', default='blogpost')
+    post = models.ForeignKey(Post, on_delete = models.CASCADE)
+    image = models.ImageField(upload_to = 'images/')
+    caption = models.TextField(default=None, blank=True, null=True)
+    
+    def gettitle(self):
+        return self.post.title

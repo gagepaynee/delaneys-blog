@@ -3,6 +3,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    color: #2d3142;
 }
 
 #wrapper {
@@ -19,7 +21,8 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #4f5d75;
+    margin-bottom: 15px;
 }
 
 #name {
@@ -37,4 +40,42 @@ nav {
     list-style-type: none;
     font-size: 18px;
     padding: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border-top: 2px solid #4f5d75;
+    margin-top: 15px;
+    padding: 30px 0;
+}
+
+.block {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block ul {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.block ul li {
+    font-size: 32px;
+    margin: 10px;
+}
+
+#footName {
+    font-size: 32px;
+}
+
+#copyright,
+#me {
+    font-size: 12px;
 }

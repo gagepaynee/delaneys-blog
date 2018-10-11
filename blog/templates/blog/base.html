@@ -7,33 +7,54 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indiv_blog.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="wrapper">
         <nav>
-            <h1 id="name">Delaney Bresnahan</h1>
+            <h1 id="name"><a href="{% url 'post_list' %}">Delaney Bresnahan</a></h1>
             <ul id="navBar">
                 <li class="navItem">
-                    Home
+                    <a href="{% url 'post_list' %}">Home</a>
                 </li>
                 <li class="navItem">
-                    Travel
+                    <a href="{% url 'travel_list' %}">Travel</a>
                 </li>
                 <li class="navItem">
-                    LYH
+                    <a href="{% url 'lyh_list' %}">LYH</a>
                 </li>
                 <li class="navItem">
-                    About
+                    <a href="{% url 'about' %}">About</a>
                 </li>
                 <li class="navItem">
-                    Contact
+                    <a href="{% url 'contact' %}">Contact</a>
                 </li>
             </ul>
         </nav>
         {% block content %}
 
         {% endblock %}
+
+        <footer>
+            <div class="block">
+                <p id="copyright">All rights reserved © 2018 Blue Ridge Belle</p>
+            </div>
+            <div class="block">
+                <p id="footName">Delaney Bresnahan</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/delaneybres/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram.com/delaneybres/"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.pinterest.com/delaneybres/"><i class="fab fa-pinterest-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="block">
+                <p id="me"><a href="https://www.gagepayne.com">Site by: Gage Payne</a></p>
+            </div>
+        </footer>
     </div>
 </body>
 
