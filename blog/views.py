@@ -9,8 +9,7 @@ from django.template.loader import get_template
 from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import Post
-import sendgrid
-from sendgrid.helpers.mail import *
+
 
 
 import smtplib
@@ -87,28 +86,6 @@ def createBigSmall(length):
         counter += 1
         
     return bigs, smalls
-
-def emailView(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                sg = sendgrid.SendGridAPIClient('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')
-                from_email = Email(from_email)
-                to_email = Email("gage_payne37@yahoo.com")
-                subject = subject
-                content = Content("text/plain", message)
-                mail = Mail(from_email, subject, to_email, content)
-                response = sg.client.mail.send.post(request_body=mail.get())
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
-    return render(request, "blog/contact.html", {'form': form})
 
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')
