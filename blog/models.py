@@ -15,11 +15,12 @@ BLOG_CATEGORIES = (
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = models.TextField(blank=True, null=True)
     category = models.CharField(max_length=6, choices=BLOG_CATEGORIES, default='Lyh')
-    created_date = models.DateTimeField(default = datetime.date.today)
+    created_date = models.DateTimeField(default = datetime.datetime.now())
     published_date = models.DateTimeField(blank=True, null=True)
-    bg_image = models.ImageField(upload_to = 'images/')
+    bg_image_skinny = models.ImageField(upload_to = 'images/')
+    bg_image_wide = models.ImageField(upload_to = 'images/')
     
     def publish(self):
         self.published_date = timezone.now()

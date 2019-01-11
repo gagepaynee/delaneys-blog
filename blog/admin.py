@@ -17,6 +17,7 @@ class PostImageInline(admin.StackedInline):
 class PostAdmin(admin.ModelAdmin):
     inlines = [PostImageInline]
     list_display = ['title']
+    save_as = True
     
 
 admin.register(PostImage, PostImageAdmin)

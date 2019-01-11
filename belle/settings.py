@@ -124,10 +124,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST = 'smtp.mail.yahoo.com'
-EMAIL_HOST_USER = 'gage_payne37@yahoo.com'
-EMAIL_HOST_PASSWORD = 'Storm377'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_PORT = 465 

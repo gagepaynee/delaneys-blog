@@ -1,19 +1,55 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div id="blogs">
-    {% for post in posts %}
+<div id="homeWrap">
 
-    <div class="blog">
-        <img class="myImg" src="{{ MEDIA_URL}}{{ post.bg_image.url }}" />
-        <div class="content">
-            <div id="bgThing"></div>
-            <p class="categoryText">{{ post.category }}</p>
-            <p class="titleText"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></p>
-            <p class="dateText">{{ post.published_date| date:"F d, Y" }}</p>
+    <div id="featureBlog">
+        <div id="featureContent">
+            <div id="featureDate">
+                <div id="bgThing2"></div>
+                <p>{{posts.0.thispost.published_date| date:"F d, Y"}}</p>
+            </div>
+            <p id="featureTitle"><a href="{% url 'post_detail' pk=posts.0.thispost.pk %}">{{posts.0.thispost.title}}</a></p>
+
+            <p id="featureText">{{posts.0.thispost.text}}</p>
         </div>
-    </div>
+        <div id="featureImgContainer">
+            <a href="{% url 'post_detail' pk=posts.0.thispost.pk %}"><img id="featureImg" src="{{ MEDIA_URL}}{{ posts.0.thispost.bg_image_wide.url }}" /></a>
+        </div>
 
-    {% endfor %}
+
+    </div>
+    <div id="divider">
+        <div class="divideLine"></div>
+    </div>
+    <div id="blogs">
+
+        {% for post in posts %}
+        {% if not forloop.first %}
+        {% if post.index in smalls %}
+        <div class="blog">
+            <img class="myImg" src="{{ MEDIA_URL}}{{ post.thispost.bg_image_skinny.url }}" />
+            <div class="content">
+                <div id="bgThing"></div>
+                <p class="categoryText">{{ post.thispost.category }}</p>
+                <p class="titleText"><a href="{% url 'post_detail' pk=post.thispost.pk %}">{{ post.thispost.title }}</a></p>
+                <p class="dateText">{{ post.thispost.published_date| date:"F d, Y" }}</p>
+            </div>
+        </div>
+        {% endif %}
+        {% if post.index in bigs %}
+        <div class="blog2">
+            <img class="myImg" src="{{ MEDIA_URL}}{{ post.thispost.bg_image_wide.url }}" />
+            <div class="content">
+                <div id="bgThing"></div>
+                <p class="categoryText">{{ post.thispost.category }}</p>
+                <p class="titleText"><a href="{% url 'post_detail' pk=post.thispost.pk %}">{{ post.thispost.title }}</a></p>
+                <p class="dateText">{{ post.thispost.published_date| date:"F d, Y" }}</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 <!--Fix media files-->
