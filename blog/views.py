@@ -32,7 +32,7 @@ def travel_list(request):
     posts = Post.objects.filter(category="Travel").order_by('-published_date')
     
     newposts = organizePosts(posts);
-    bigs, smalls = createBigSmall(len(newposts))
+    bigs, smalls = createBigSmall(len(newposts), 0)
     
     return render(request, 'blog/travel.html', {'posts': newposts, 'bigs' : bigs, 'smalls' : smalls})
 
@@ -40,7 +40,7 @@ def lyh_list(request):
     posts = Post.objects.filter(category="LYH").order_by('-published_date')
     
     newposts = organizePosts(posts);
-    bigs, smalls = createBigSmall(len(newposts))
+    bigs, smalls = createBigSmall(len(newposts), 1)
     
     return render(request, 'blog/lyh.html', {'posts': newposts, 'bigs' : bigs, 'smalls' : smalls})
 
@@ -67,11 +67,11 @@ def organizePosts(posts):
         counter += 1
     return newposts
 
-def createBigSmall(length):
+def createBigSmall(length, offset):
     bigs = []
     smalls = []
     
-    counter = 0
+    counter = 0 + offset
     while counter < length:
         bigs.append(counter)
         if len(bigs) % 2 != 0:
