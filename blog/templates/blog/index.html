@@ -22,10 +22,11 @@
         <div class="divideLine"></div>
     </div>
     <div id="blogs">
-
+        
         {% for post in posts %}
         {% if not forloop.first %}
         {% if post.index in smalls %}
+        
         <div class="blog">
             <img class="myImg" src="{{ MEDIA_URL}}{{ post.thispost.bg_image_skinny.url }}" />
             <div class="content">
