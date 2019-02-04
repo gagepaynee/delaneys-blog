@@ -1,0 +1,38 @@
+#heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.imgCaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#category {
+    font-size: 22px;
+}
+
+#title {
+    font-size: 36px;
+}
+
+#date {
+    font-size: 14px;
+}
+
+.pic {
+    max-width: 100%;
+    max-height: 800px;
+    image-orientation: from-image;
+}
+
+#heading p,
+.imgCaption p {
+    margin-top: 20px;
+}
