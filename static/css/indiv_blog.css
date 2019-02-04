@@ -20,6 +20,7 @@
 
 #title {
     font-size: 36px;
+    margin: 15px;
 }
 
 #date {
@@ -32,5 +33,5 @@
 
 #heading p,
 .imgCaption p {
-    margin-top: 20px;
+    margin: 15px;
 }
