@@ -264,7 +264,7 @@
     }
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 600px) {
 
     #featureImgContainer {
         width: 100%;

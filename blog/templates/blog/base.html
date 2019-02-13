@@ -28,7 +28,7 @@
                     <img src="{% static 'images/image2.png' %}" alt="Blue Ridge Belle" />
                 </a>
             </div>
-            <ul id="navBar">
+            <ul id="navBar" class="flexDisplay">
                 <li class="navItem">
                     <a href="{% url 'post_list' %}">Home</a>
                 </li>
@@ -74,10 +74,12 @@
     <script>
             function myFunction() {
                 var x = document.getElementById("navBar");
-                if (x.style.display === "flex") {
-                  x.style.display = "none";
+                if (x.classList.contains('flexDisplay')) {
+                  x.classList.add('noneDisplay');
+                  x.classList.remove('flexDisplay');
                 } else {
-                  x.style.display = "flex";
+                    x.classList.remove('noneDisplay');
+                    x.classList.add('flexDisplay');
                 }
               }
     </script>
