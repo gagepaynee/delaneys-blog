@@ -4,4 +4,5 @@ __pycache__
 myvenv
 db.sqlite3
 /blog/static/images
+/blog/media/images
 .DS_Store
