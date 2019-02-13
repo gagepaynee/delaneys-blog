@@ -1,3 +1,6 @@
+.wrapper {
+    width: 100%;
+}
 #heading {
     width: 100%;
     display: flex;
@@ -5,6 +8,10 @@
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
+}
+
+#heading p {
+    width: 100%;
 }
 
 .imgCaption {

@@ -5,4 +5,5 @@ myvenv
 db.sqlite3
 /blog/static/images
 /blog/media/images
+media/images
 .DS_Store
