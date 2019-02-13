@@ -14,3 +14,9 @@
     max-width: 100%;
     margin-bottom: 15px;
 }
+
+@media all and (max-width: 650px) {
+    .mainContent {
+        font-size: 14px;
+    }
+}

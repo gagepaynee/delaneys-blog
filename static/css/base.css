@@ -109,7 +109,7 @@ footer {
 
 
 
-@media all and (max-width: 520px) {
+@media all and (max-width: 650px) {
 
     .menu-icon {
         display: block;

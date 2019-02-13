@@ -42,3 +42,16 @@
 .imgCaption p {
     margin: 15px;
 }
+
+@media all and (max-width: 980px) {
+    #title {
+        text-align: center;
+        line-height: 1.4;
+    }
+}
+
+@media all and (max-width: 650px) {
+    p {
+        font-size: 14px;
+    }
+}
