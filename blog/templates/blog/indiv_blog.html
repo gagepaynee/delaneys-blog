@@ -6,7 +6,7 @@
         <h3 id="category">{{post.category}}</h3>
         <h1 id="title">{{post.title}}</h1>
         <h3 id="date">{{post.published_date}}</h3>
-        <p id="mainContent">{{post.text|linebreaks}}</p>
+        <p id="mainContent">{{post.text|linebreaksbr}}</p>
     </div>
     {% for image in post.postimage_set.all %}
     <div class="imgCaption">

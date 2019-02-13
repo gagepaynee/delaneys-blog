@@ -7,14 +7,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 30px;
+    margin: 30px 0;
+}
+
+#heading p {
+    width: 100%;
 }
 
 .imgCaption {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
 }
 
 #category {
@@ -23,7 +27,6 @@
 
 #title {
     font-size: 36px;
-    margin: 15px;
 }
 
 #date {
@@ -32,11 +35,10 @@
 
 .pic {
     max-width: 100%;
-    
+
 }
 
 #heading p,
 .imgCaption p {
-    margin-top: 15px;
-    width: 100%;
+    margin: 15px;
 }
