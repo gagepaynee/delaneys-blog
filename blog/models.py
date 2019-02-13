@@ -4,6 +4,10 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 import datetime
+from PIL import Image, ExifTags
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+import os
 
 BLOG_CATEGORIES = (
     ('Travel', 'TRAVEL'),
@@ -37,3 +41,41 @@ class PostImage(models.Model):
     
     def gettitle(self):
         return self.post.title
+
+@receiver(post_save, sender=PostImage, dispatch_uid="update_image_postimage")
+def update_image(sender, instance, **kwargs):
+    if instance.image:
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        fullpath = BASE_DIR + instance.image.url
+        rotate_image(fullpath)
+
+@receiver(post_save, sender=Post, dispatch_uid="update_image_post")
+def update_image2(sender, instance, **kwargs):
+    if instance.bg_image_skinny:
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        fullpath = BASE_DIR + instance.bg_image_skinny.url
+        rotate_image(fullpath)
+    if instance.bg_image_wide:
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        fullpath = BASE_DIR + instance.bg_image_wide.url
+        rotate_image(fullpath)
+
+        
+def rotate_image(filepath):
+    try:
+        image = Image.open(filepath)
+        for orientation in ExifTags.TAGS.keys():
+            if ExifTags.TAGS[orientation] == 'Orientation':
+                break
+        exif = dict(image._getexif().items())
+
+        if exif[orientation] == 3:
+            image = image.rotate(180, expand=True)
+        elif exif[orientation] == 6:
+            image = image.rotate(270, expand=True)
+        elif exif[orientation] == 8:
+            image = image.rotate(90, expand=True)
+        image.save(filepath)
+        image.close()
+    except (AttributeError, KeyError, IndexError):
+        pass

@@ -11,7 +11,7 @@ class PostImageAdmin(admin.ModelAdmin):
 
 class PostImageInline(admin.StackedInline):
     model = PostImage
-    max_num = 10
+    max_num = 40
     extra = 0
     
 class PostAdmin(admin.ModelAdmin):
