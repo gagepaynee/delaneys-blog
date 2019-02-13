@@ -4,6 +4,12 @@
     width: 100%;
 }
 
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #featureBlog {
     display: flex;
     justify-content: center;
@@ -265,6 +271,10 @@
 }
 
 @media all and (max-width: 600px) {
+
+    #homeWrap {
+        margin-top: 20px;
+    }
 
     #featureImgContainer {
         width: 100%;
