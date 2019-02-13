@@ -21,8 +21,9 @@
 }
 
 #featureTitle {
-    font-size: 64px;
+    font-size: 54px;
     margin: 20px 0;
+    line-height: 1.1;
 }
 
 #featureDate {
@@ -242,5 +243,8 @@
     .blog {
         width: 100%;
         height: 350px;
+    }
+    .blog2 {
+        width: 100%;
     }
 }

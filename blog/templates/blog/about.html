@@ -1,5 +1,12 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 {% block content %}
 
-
+<div class="wrapper">
+    <h1>About</h1>
+    <div class="mainContent">
+        <img class="pic" src="{% static 'images/image4.JPG' %}" alt="Header Photo" />
+        <p>Hi there! My name is Delaney Bresnahan and I’m a college student from Ohio currently studying abroad in Sevilla, Spain. Through this blog you can follow along as I travel, build friendships, and learn more about other cultures here in Europe. <br><br>Throughout this season, I hope to share with you all of the ups and downs of my life and how the Lord is still being faithful through it all.  It’s going to be an amazing adventure; I hope you stick around for it! </p>
+    </div>
+</div>
 {% endblock %}

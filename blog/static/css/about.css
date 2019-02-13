@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92%;
+    flex-direction: column;
+}
+
+.mainContent {
+    margin: 15px 0;
+}
+
+.mainContent .pic {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
