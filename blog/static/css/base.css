@@ -126,7 +126,6 @@ footer {
 
     #navBar {
         flex-direction: column;
-        padding-top: 20px;
     }
 
     .navItem {
