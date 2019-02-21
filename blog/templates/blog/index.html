@@ -4,13 +4,14 @@
 
     <div id="featureBlog">
         <div id="featureContent">
+            <p id="featureCat">{{ posts.0.thispost.category }}</p>
             <div id="featureDate">
                 <div id="bgThing2"></div>
                 <p>{{posts.0.thispost.published_date| date:"F d, Y"}}</p>
             </div>
             <p id="featureTitle"><a href="{% url 'post_detail' pk=posts.0.thispost.pk %}">{{posts.0.thispost.title}}</a></p>
 
-            <p id="featureText">{{posts.0.thispost.text}}</p>
+            <p id="featureText">{{posts.0.thispost.text|linebreaksbr}}</p>
         </div>
         <div id="featureImgContainer">
             <a href="{% url 'post_detail' pk=posts.0.thispost.pk %}"><img id="featureImg" src="{{ MEDIA_URL}}{{ posts.0.thispost.bg_image_wide.url }}" /></a>

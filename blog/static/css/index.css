@@ -1,3 +1,4 @@
+
 #homeWrap {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#featureCat {
+    font-weight: bold;
 }
 
 #featureBlog {
@@ -33,8 +38,8 @@
 }
 
 #featureDate {
-    font-size: 18px;
-    width: 40%;
+    font-size: 16px;
+    width: 175px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -43,20 +48,19 @@
 
 #featureDate p {
     z-index: 1;
+    padding: 5px;
 }
 
 #bgThing2 {
     width: 100%;
     height: 100%;
     position: absolute;
-    padding: 5px;
     z-index: 0;
     border: 1px solid #5c8eb7;
 }
 
 #featureText {
     font-size: 18px;
-    margin-top: 10px;
 }
 
 #featureImgContainer {
@@ -102,6 +106,7 @@
     border: 2px solid transparent;
     -webkit-transition: border .5s;
     transition: border .5s;
+    text-align: center;
 }
 
 .blog2 {
@@ -118,6 +123,7 @@
     border: 2px solid transparent;
     -webkit-transition: border .5s;
     transition: border .5s;
+    text-align: center;
 }
 
 .blog:hover, .blog2:hover {
@@ -216,9 +222,7 @@
     #featureText {
         font-size: 16px;
     }
-    #featureDate {
-        width: 60%;
-    }
+
     .blog {
         width: 48%;
         height: 450px;
@@ -248,7 +252,7 @@
     }
     #featureDate {
         font-size: 14px;
-        width: 25%;
+        width: 150px;
         margin-top: 20px;
     }
     #featureTitle {
@@ -281,9 +285,7 @@
         height: auto;
     }
 
-    #featureDate {
-        width: 40%;
-    }
+
     #featureTitle {
         font-size: 24px;
     }
@@ -297,6 +299,7 @@
     .blog2 {
         height: 200px;
         width: 100%;
+        line-height: 1;
     }
 }
 
@@ -311,6 +314,5 @@
     }
     #featureDate {
         font-size: 12px;
-        width: 60%;
     }
 }
