@@ -1,3 +1,7 @@
+p {
+    width: 100%;
+}
+
 .wrapper {
     width: 92%;
 }
@@ -19,6 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #category {
@@ -34,13 +39,13 @@
 }
 
 .pic {
-    max-width: 85%;
+    max-width: 80%;
 
 }
 
 #heading p,
 .imgCaption p {
-    margin: 15px;
+    margin: 15px 0;
 }
 
 @media all and (max-width: 980px) {
@@ -48,9 +53,13 @@
         text-align: center;
         line-height: 1.4;
     }
+    .pic {
+        max-width: 100%;
+    
+    }
 }
-
 @media all and (max-width: 600px) {
+    
     p {
         font-size: 14px;
     }
