@@ -115,7 +115,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
 
     .menu-icon {
         display: block;
@@ -139,7 +139,7 @@ footer {
     }
     #logo a img {
         max-width: 100%;
-        height: auto;
+        height: 50%;
         margin: 0;
         padding: 20px 0;
         border-bottom: 2px solid #5c8eb7;
