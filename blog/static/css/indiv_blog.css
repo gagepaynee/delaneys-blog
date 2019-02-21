@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -34,19 +35,23 @@
 }
 
 .pic {
-    max-width: 100%;
+    max-width: 80%;
 
 }
 
 #heading p,
 .imgCaption p {
-    margin: 15px;
+    margin: 15px 0;
 }
 
 @media all and (max-width: 980px) {
     #title {
         text-align: center;
         line-height: 1.4;
+    }
+    .pic {
+        max-width: 100%;
+    
     }
 }
 @media all and (max-width: 600px) {

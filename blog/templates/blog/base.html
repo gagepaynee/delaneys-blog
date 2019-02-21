@@ -25,7 +25,7 @@
         <nav>
             <div id="logo">
                 <a href="{% url 'post_list' %}">
-                    <img src="{% static 'images/image2.png' %}" alt="Blue Ridge Belle" />
+                    <img src="{{ STATIC_URL }}images/image2.png" alt="Blue Ridge Belle" />
                 </a>
             </div>
             <ul id="navBar" class="flexDisplay">
