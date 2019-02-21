@@ -255,6 +255,8 @@
     #featureDate {
         font-size: 14px;
         width: 150px;
+    }
+    #featureCat {
         margin-top: 20px;
     }
     #featureTitle {

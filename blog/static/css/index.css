@@ -252,10 +252,12 @@
         align-items: center;
         margin: 0;
     }
+    #featureCat {
+        margin-top: 20px;
+    }
     #featureDate {
         font-size: 14px;
         width: 150px;
-        margin-top: 20px;
     }
     #featureTitle {
         font-size: 36px;
