@@ -12,7 +12,10 @@
             <p id="featureTitle"><a href="{% url 'post_detail' pk=posts.0.thispost.pk %}">{{posts.0.thispost.title}}</a>
             </p>
 
-            <p id="featureText">{{posts.0.thispost.text|linebreaksbr}}</p>
+            <p id="featureText" >{{posts.0.thispost.text|linebreaksbr}}</p>
+            <div id="readMoreContainer">
+            <a id="readMore" href="{% url 'post_detail' pk=posts.0.thispost.pk %}">Read More</a>
+            </div>
         </div>
         <div id="featureImgContainer">
             <a href="{% url 'post_detail' pk=posts.0.thispost.pk %}"><img id="featureImg"
@@ -24,7 +27,10 @@
     <div id="divider">
         <div class="divideLine"></div>
     </div>
+    <h1 id="checkOut">Check out my other blogs!</h1>
     <div id="blogs">
+
+        
 
         {% for post in posts %}
 

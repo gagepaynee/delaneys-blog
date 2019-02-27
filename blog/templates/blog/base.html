@@ -14,16 +14,17 @@
 
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
-        <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
+    <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
     <div id="wrapper">
-            
+
         <nav>
             <div id="logo">
                 <a href="{% url 'post_list' %}">
@@ -43,9 +44,9 @@
                 <li class="navItem">
                     <a href="{% url 'about' %}">About</a>
                 </li>
-                
+
             </ul>
-            
+
         </nav>
         {% block content %}
 
@@ -62,9 +63,12 @@
                     </a>
                 </div>
                 <ul>
-                    <li><a href="https://www.instagram.com/delaneybres/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.instagram.com/delaneybres/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="https://www.pinterest.com/delaneybres/" target="_blank"><i class="fab fa-pinterest-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/delaneybres/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram.com/delaneybres/" target="_blank"><i
+                                class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.pinterest.com/delaneybres/" target="_blank"><i
+                                class="fab fa-pinterest-square"></i></a></li>
                 </ul>
             </div>
             <div class="block">
@@ -72,18 +76,20 @@
             </div>
         </footer>
     </div>
-
+    <script src="{% static 'js/clamp.js' %}"></script>
     <script>
-            function myFunction() {
-                var x = document.getElementById("navBar");
-                if (x.classList.contains('flexDisplay')) {
-                  x.classList.add('noneDisplay');
-                  x.classList.remove('flexDisplay');
-                } else {
-                    x.classList.remove('noneDisplay');
-                    x.classList.add('flexDisplay');
-                }
-              }
+        function myFunction() {
+            var x = document.getElementById("navBar");
+            if (x.classList.contains('flexDisplay')) {
+                x.classList.add('noneDisplay');
+                x.classList.remove('flexDisplay');
+            } else {
+                x.classList.remove('noneDisplay');
+                x.classList.add('flexDisplay');
+            }
+        }
+        var text = document.getElementById('featureText');
+        $clamp(text, {clamp: 10});
     </script>
 </body>
 
