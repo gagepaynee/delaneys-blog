@@ -88,8 +88,13 @@
     border: 1px solid #5c8eb7;
 }
 
+#featureTextContainer {
+    height: 200px;
+}
+
 #featureText {
     font-size: 18px;
+    
 }
 
 
