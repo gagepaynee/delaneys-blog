@@ -3,7 +3,7 @@
 __pycache__
 myvenv
 db.sqlite3
-/blog/static/images
-/blog/media/images
+/blog/static/
+/blog/media/
 media/images
 .DS_Store
